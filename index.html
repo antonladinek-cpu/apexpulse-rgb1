@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexPulse RGB - Cyber-Sonic</title>
+  <style>
+    /* Ponastavitev strani */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #05050a;
+      overflow: hidden;
+    }
+
+    /* Glavni kontejner čez cel zaslon */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 8%;
+      box-sizing: border-box;
+    }
+
+    /* Video v ozadju - raztegnjen in centriran */
+    .bg-media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    /* Temni filter čez video, da lažje beremo tekst */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(5, 5, 10, 0.8) 30%, rgba(5, 5, 10, 0.3) 100%);
+      z-index: 2;
+    }
+
+    /* Tekstovni del */
+    .content-container {
+      position: relative;
+      z-index: 3;
+      max-width: 550px;
+    }
+
+    .main-title {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 20px;
+      line-height: 1.1;
+      text-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #b3b3cc;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    /* Svetleč neonski gumb z modro-vijoličnim prehodom */
+    .neon-btn {
+      display: inline-block;
+      padding: 16px 36px;
+      background: linear-gradient(135deg, #00f3ff, #bd00ff);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+      border-radius: 50px;
+      box-shadow: 0 0 20px rgba(0, 243, 255, 0.4), 0 0 40px rgba(189, 0, 255, 0.3);
+      transition: all 0.4s ease;
+      text-transform: uppercase;
+    }
+
+    .neon-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px #00f3ff, 0 0 60px #bd00ff;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero-section">
+    <!-- Video element, ki bo predvajal datoteko video.mp4, ki jo naložite zraven -->
+    <video autoplay loop muted playsinline class="bg-media">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Temni filter za besedilo -->
+    <div class="overlay"></div>
+
+    <!-- Vsebina pristajalne strani -->
+    <div class="content-container">
+      <h1 class="main-title">Prebijte zvočni zid prihodnosti.</h1>
+      <p class="subtitle">Doživite neprekosljiv prostorski zvok in neonsko estetiko z gaming slušalkami ApexPulse RGB.</p>
+      <a href="#" class="neon-btn">Zagotovi si svoje zdaj</a>
+    </div>
+  </section>
+
+</body>
+</html>
